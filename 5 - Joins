@@ -1,0 +1,72 @@
+JOINS/INNER JOIN,
+
+GATHER DATAS THAT'S THE SAME/COMMON/OVERLAPPING IN BOTH TABLE WITH INNER JOIN
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+GATHER DATAS THAT'S IN BOTH TABLE REGARDLESS OF HAVING A ANYTHIG TO LINK WITH IT WITH FULL OUTER JOIN
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+Full outer join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+VIEW ALL DATA IN TABLE A but IF IT'S ONLY IN TABLE B REMOVE IT WITH LEFT OUT JOIN 
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+Left outer join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+VIEW ALL DATA IN TABLE A & B WITH RIGHT OUTER JOIN
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+Right outer join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+
+FURTHER WAYS
+SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+inner join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT EmployeeSalary.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+inner join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+Right outer join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+left outer join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT EmployeeSalary.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+left outer join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, Salary
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+inner join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+WHERE FirstName <> 'Sam'
+ORDER BY Salary DESC
+
+SELECT JobTitle, Salary
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+inner join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+WHERE JobTitle = 'supervisor'
+
+SELECT JobTitle, AVG(Salary)
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+inner join [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+WHERE JobTitle = 'cleaner'
+GROUP BY JobTitle
