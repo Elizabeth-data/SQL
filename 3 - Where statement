@@ -1,0 +1,70 @@
+/*
+Where Statement
+=, <>, <, >, And, Or, Like, Null, Not Null, In
+*/
+
+SELECT TOP 1*
+FROM [SQL Tutorial].dbo.EmployeeSalary
+
+SELECT TOP 2*
+FROM EmployeeSalary
+
+SELECT *
+FROM EmployeeDemographics
+where FirstName = 'Sarah'
+
+SELECT *
+FROM EmployeeDemographics
+where FirstName <> 'Sarah'
+
+SELECT *
+FROM EmployeeDemographics
+where Age < 25
+
+SELECT *
+FROM EmployeeDemographics 
+where Age > 25
+
+SELECT *
+FROM EmployeeDemographics 
+where Age > 25 AND Gender = 'Male'
+
+SELECT *
+FROM EmployeeDemographics 
+where Age > 25 AND Gender = 'Female'
+
+SELECT *
+FROM EmployeeDemographics 
+where Gender = 'Female'
+
+SELECT *
+FROM EmployeeDemographics 
+where Age >= 35 AND Gender = 'Male'
+
+SELECT *
+FROM EmployeeDemographics 
+where LastName LIKE 'M%'
+
+SELECT *
+FROM EmployeeDemographics 
+where LastName LIKE '%R%'
+
+SELECT *
+FROM EmployeeDemographics 
+where LastName LIKE 'r%c%'
+
+SELECT *
+FROM EmployeeDemographics 
+where LastName Is Null
+
+SELECT *
+FROM EmployeeDemographics 
+where LastName Is Not null
+
+SELECT *
+FROM EmployeeDemographics 
+where FirstName = 'lot' AND LastName = 'rich'
+
+SELECT *
+FROM EmployeeDemographics 
+where LastName IN ('eva', 'slim', 'rich')
