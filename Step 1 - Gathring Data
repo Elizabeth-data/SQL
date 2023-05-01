@@ -1,0 +1,37 @@
+CREATING HEADING IN SQL
+CREATE TABLE EmployeeDemographics
+(EmployeeID Int,
+FirstName varchar(50),
+LastName varchar(50),
+Age Int,
+Gender varchar(50)
+)
+
+CREATE TABLE EmployeeSalary
+(EmployeeID Int,
+JobTitle varchar(50),
+Salary Int)
+
+INSERT INTO EmployeeDemographics VALUES
+(1000, 'Sam', 'Eva', 27, 'Male'),
+(1001, 'Lot', 'Rich', 22, 'Female'),
+(1002, 'Mark', 'Jin', 28, 'Male'),
+(1003, 'Sarah', 'Smart', 22, 'Female'),
+(1004, 'Love', 'Mark', 30, 'Male'),
+(1005, 'Rich', 'Slim', 35, 'Male'),
+(1006, 'Mart', 'Eve', 24, 'Male'),
+(1007, 'Ella', 'Mark', 31, 'Female'),
+(1008, 'Smart', 'Jin', 38, 'Male'),
+(1009, 'Mart', 'Peter', 32, 'Male')
+
+INSERT INTO EmployeeSalary VALUES
+(1000, 'Accountant', 250000),
+(1001, 'HR', 220000),
+(1002, 'Manager', 200000),
+(1003, 'Supervisor', 150000),
+(1004, 'Asst. Supervisor', 100000),
+(1005, 'Lpd', 80000),
+(1006, 'Cashier 1', 70000),
+(1007, 'Cashier 2', 65000),
+(1008, 'Floor Security', 50000),
+(1009, 'Cleaner', 40000)
