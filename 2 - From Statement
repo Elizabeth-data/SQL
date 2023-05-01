@@ -1,0 +1,29 @@
+/*Select Statement
+*, Top, Distinct, Count, As, Max, Min, Aavg
+*/
+
+SELECT TOP 3*
+FROM EmployeeDemographics
+
+SELECT DISTINCT (Gender)
+FROM EmployeeDemographics
+
+SELECT COUNT (LastName) AS LastNameCount
+FROM EmployeeDemographics
+
+SELECT *
+FROM EmployeeSalary
+
+SELECT Min (salary) AS MinimumSalary
+FROM EmployeeSalary
+
+SELECT max (salary) AS MaximumSalary
+FROM EmployeeSalary
+
+SELECT Avg (salary) AS AverageSalary
+FROM EmployeeSalary
+
+
+FROM ANOTHER DATABASE
+SELECT TOP 3*
+FROM [SQL Tutorial].dbo.EmployeeSalary
