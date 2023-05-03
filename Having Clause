@@ -1,0 +1,25 @@
+
+NOTE: HAVING CLAUSE COMES BEFORE GROUPBY TO WORK
+
+
+SELECT Jobtitle, COUNT(Jobtitle)
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+JOIN [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+GROUP BY JobTitle
+HAVING COUNT(JOBTITLE) = 1
+
+SELECT Jobtitle, AVG(Salary)
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+JOIN [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+GROUP BY JobTitle
+ORDER BY AVG(Salary)
+
+SELECT Jobtitle, AVG(Salary)
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+JOIN [SQL Tutorial].dbo.EmployeeSalary
+ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+GROUP BY JobTitle
+HAVING AVG(SALARY) > 50000
+ORDER BY AVG(Salary)
