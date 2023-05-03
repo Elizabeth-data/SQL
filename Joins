@@ -1,0 +1,31 @@
+INSERT INTO Warehouseemployeedemographics
+(1020, 'Chuks', 'Iyke', 23, 'Male'),
+(1021, 'Abrah', 'Sat', 25, 'Female'),
+(1022, 'Solomon', 'Matthew', 20, 'Male'),
+
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+UNION
+SELECT *
+FROM [SQL Tutorial].dbo.WarehouseEmployeeDemographics
+
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+UNION ALL
+SELECT *
+FROM [SQL Tutorial].dbo.WarehouseEmployeeDemographics
+
+SELECT *
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+UNION ALL
+SELECT *
+FROM [SQL Tutorial].dbo.WarehouseEmployeeDemographics
+ORDER BY EmployeeID
+
+this works cos of the the same number of columns but can't be used if there are different datas like Age and Salary mixed  together is wrong.
+SELECT EmployeeID, firstname, age 
+FROM [SQL Tutorial].dbo.EmployeeDemographics
+UNION 
+SELECT EmployeeID, JobTitle, Salary
+FROM [SQL Tutorial].dbo.EmployeeSalary
+ORDER BY EmployeeID
