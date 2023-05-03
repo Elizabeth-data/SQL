@@ -1,0 +1,19 @@
+NOTE; you might want to using the SELECT command to see what you want to delect before using the DELETE command
+
+SELECT *
+FROM [SQL Tutorial].DBO.EmployeeDemographics
+
+UPDATE [SQL Tutorial].DBO.EmployeeDemographics
+SET FirstName = 'Samson', LastName = 'King'
+WHERE Gender = 'Male'AND Age = 28
+
+UPDATE [SQL Tutorial].DBO.EmployeeDemographics
+SET EmployeeID = 1012
+WHERE FirstName = 'Samson' and LastName= 'king'
+
+DELETE [SQL Tutorial].DBO.EmployeeDemographics
+where EmployeeID = 1012
+
+SELECT *
+FROM [SQL Tutorial].DBO.EmployeeDemographics
+where EmployeeID = 1004
