@@ -1,0 +1,28 @@
+ALLIASING - The process of delecting and amending column names
+
+/*
+Aliasing
+*/
+
+
+SELECT FIRSTNAME Fname
+from [SQL Tutorial].DBO.EmployeeDemographics
+
+SELECT FIRSTNAME + ' ' + LastName AS FullName
+from [SQL Tutorial].DBO.EmployeeDemographics
+
+SELECT  avg(age) AS AvgAge
+from [SQL Tutorial].DBO.EmployeeDemographics
+
+SELECT  Demo.EmployeeID, Sal.Salary
+from [SQL Tutorial].DBO.EmployeeDemographics AS Demo
+JOIN [SQL Tutorial].DBO.EmployeeSalary AS Sal
+ON DEMO.EmployeeID = SAL.EmployeeID
+
+
+SELECT  Demo.EmployeeID, Demo.FirstName, DEMO.LastName, Sal.JobTitle
+from [SQL Tutorial].DBO.EmployeeDemographics AS Demo
+LEFT JOIN [SQL Tutorial].DBO.EmployeeSalary AS Sal
+ON DEMO.EmployeeID = SAL.EmployeeID
+LEFT JOIN [SQL Tutorial].DBO.WarehouseEmployeeDemographics Ware
+ON DEMO.EmployeeID = WARE.EmployeeID
