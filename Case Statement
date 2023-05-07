@@ -1,5 +1,5 @@
-CASE STATEMENT- Used mostly to categorize or label things
-always use END when statinf a case
+--CASE STATEMENT- Used mostly to categorize or label things
+--always use END when stating a case
 
 -HERE ORDER BY IS USE FOR CLEANING UP.
 SELECT FIRSTNAME,LASTNAME, AGE
